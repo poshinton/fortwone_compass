@@ -19,20 +19,12 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@drawable/bg2" >
-        <LinearLayout
+       <RelativeLayout
             android:id="@+id/view_compass"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:background="@drawable/background_light"
-            android:orientation="vertical" >
-                    <TextView 
-                        android:id="@+id/toward"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/dark"
-                        android:textSize="20sp"
-                        android:paddingLeft="8dp"
-                        android:text="@string/get_direction"/>
+             >
                         <LinearLayout
                             android:id="@+id/layout_direction"
                             android:layout_width="0dip"
@@ -49,16 +41,33 @@
                         </LinearLayout>
                         <com.fortwone.compass.CompassView
                             android:id="@+id/compass_pointer"
-                            android:layout_marginTop="35dp"
+                            android:layout_centerInParent="true"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:src="@drawable/compass" />
+                            android:src="@drawable/compass_main" >
+                           </com.fortwone.compass.CompassView>
+                        <TextView 
+                            android:id="@+id/toward"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="24sp"
+                            android:textColor="#000000"
+                            android:layout_centerInParent="true"
+                            android:text="@string/get_direction"/>
+             <ImageView 
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentBottom="true"
+                 android:id="@+id/location_yun"
+                 android:src="@drawable/location"/>
             <FrameLayout
                 android:id="@+id/location_layout"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/location_yun"
                 android:layout_marginTop="35dp"
+                android:layout_alignParentBottom="true"
                 android:background="@drawable/background_bottom" >
                 <TextView
                     android:id="@+id/textview_location"
@@ -69,7 +78,7 @@
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="#ff222222" />
                  </FrameLayout>
-        </LinearLayout>
+        </RelativeLayout>
 
 
 

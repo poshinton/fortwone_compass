@@ -128,7 +128,7 @@ public class MainActivity extends Activity {
         mDirectionLayout = (LinearLayout) findViewById(R.id.layout_direction);
         mAngleLayout = (LinearLayout) findViewById(R.id.layout_angle);
 
-        mPointer.setImageResource(mChinease ? R.drawable.compass_cn : R.drawable.compass);
+        mPointer.setImageResource(mChinease ? R.drawable.compass_cn : R.drawable.compass_1);
     }
 
     @SuppressWarnings("deprecation")
@@ -191,7 +191,7 @@ public class MainActivity extends Activity {
             // north
             t="北";
         }
-        direct.setText("您目前手机朝向：\n\n\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b"+t+"\b\b\b"+yun+"°");
+        direct.setText("方向：\n\n"+t+"\b\b\b"+yun+"°");
 
    
 	}
